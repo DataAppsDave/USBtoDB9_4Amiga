@@ -111,8 +111,10 @@ The firmware is written in C++ using the Arduino IDE framework and the Adafruit 
 
 On boot the Pico W initialises all GPIO pins as outputs and sets them HIGH (released). It then starts the TinyUSB Host stack which monitors the USB port for incoming devices.
 
-When a USB joystick or gamepad is connected via the OTG adapter, TinyUSB detects it as a HID device and begins receiving reports continuously at approximately 8-10ms intervals.
-
+When a USB joystick or gamepad is connected via a USB>USB-C adapter (Directly to the on-board Pico USB-C), TinyUSB detects it as a HID device and begins receiving reports continuously at approximately 8-10ms intervals. It took a long time to work out how to get the PICO listening on the on board USB-C. Lots of repo's out there helped finally work it out, including the Tiny USB host examples - hid_controller repo 
+```
+https://github.com/hathach/tinyusb/tree/master/examples/host/hid_controller
+```
 Each report contains the current state of all axes and buttons. The firmware reads three values from each report:
 
 - **Byte 0** — X axis (left/right direction)
@@ -142,3 +144,8 @@ When the joystick is disconnected all pins are released HIGH and the adapter wai
 | Solid (after connect) | Joystick connected and receiving data |
 
 > **Note:** Button byte values (0x10 for Fire 1 and 0x20 for Fire 2) are specific to the Retrogames THEJoystick. Other USB controllers may use different values and may require remapping in the firmware.
+
+Install the firmware on the PICO, and other than a few issues to untangle with Fire2 being intermittent (which may be my solder job) we have a fully functional, brand new USB joystick working on a classic Amiga 500.
+
+
+
