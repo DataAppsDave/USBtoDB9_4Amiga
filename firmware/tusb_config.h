@@ -1,0 +1,10 @@
+#ifndef _TUSB_CONFIG_H_
+#define _TUSB_CONFIG_H_
+
+#define CFG_TUSB_RHPORT0_MODE          OPT_MODE_HOST
+
+#ifndef CFG_TUH_ENUMERATION_BUFSIZE
+#define CFG_TUH_ENUMERATION_BUFSIZE    512
+#endif
+
+#endif
