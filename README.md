@@ -145,7 +145,7 @@ When the joystick is disconnected all pins are released HIGH and the adapter wai
 
 > **Note:** Button byte values (0x10 for Fire 1 and 0x20 for Fire 2) are specific to the Retrogames THEJoystick. Other USB controllers may use different values and may require remapping in the firmware.
 
-Install the firmware on the PICO, and other than a few issues to untangle with Fire2 being intermittent (which may be my solder job) we have a fully functional, brand new USB joystick working on a classic Amiga 500.
+Install the firmware on the PICO - Using Adruino IDE with all the settings above, open the ino and h file into a single sketch - connect and upload to Pico. Other than a few issues to untangle with Fire2 being intermittent (which may be my solder job) we have a fully functional, brand new USB joystick working on a classic Amiga 500.
 
 
 
