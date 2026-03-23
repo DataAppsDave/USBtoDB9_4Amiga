@@ -149,3 +149,6 @@ Install the firmware on the PICO - Using Adruino IDE with all the settings above
 
 
 
+![IMG_20260323_114911277](https://github.com/user-attachments/assets/2d08668e-b656-4e13-aa76-365cc3c1ee42)
+> Finished in project box. 
+
